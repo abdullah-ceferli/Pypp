@@ -1,6 +1,5 @@
 # Python build files
 build/
-dist/
 *.spec
 
 # C++ Executables
