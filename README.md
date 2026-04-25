@@ -1,4 +1,4 @@
-# 🚀 PyPP Language
+# 🚀 PyPP Language `v1 Beta`
 
 **PyPP** is a high-performance, lightweight scripting language built with C++17. It blends the clean, readable syntax of modern scripting languages with the structural benefits of explicit typing and C++ efficiency.
 
