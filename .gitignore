@@ -1,5 +1,17 @@
-.\build
-.\installer
-.\serup.spec
-.\venv
-.\pypp.exe
+# Python build files
+build/
+dist/
+*.spec
+
+# C++ Executables
+*.exe
+*.o
+*.obj
+
+# Virtual Environments
+venv/
+.venv/
+env/
+
+# IDE files
+.vscode/
