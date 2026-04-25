@@ -6,11 +6,12 @@
 
 ## 🛠 Features
 
-* **Explicit Typing:** Native support for `int`, `float`, `str`, `array`, and `obj`.
+* **Explicit Typing:** Native support for `int`, `float`, `str`, `array`,  `bool`, and `obj`.
 * **Structured Objects:** Key-value mapping using the `=>` syntax.
 * **Advanced Control Flow:** Full `if / ifelse / else` chains, `while`, and `do-while` loops.
 * **Modern Iteration:** Range-based loops, array iteration, and object key traversal.
 * **Memory Debugging:** Built-in `var_dumper` for structured inspection of data types.
+* **Debug items:** Printing-in `say` for inspection of data.
 
 ---
 
