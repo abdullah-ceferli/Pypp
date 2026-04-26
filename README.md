@@ -40,7 +40,7 @@ make
 ## 🛠 Features
 
 * **Array methoods:** 
-`push(v)`, `pop()`                          Add/remove from end.
+* **`push(v)`, `pop()`                          Add/remove from end.**
 `shift()`, `unshift(v)`                     Remove/add at front.
 `indexOf(v)`, `lastIndexOf(v)`              Search positions.
 `includes(v)`,                              Returns bool.
