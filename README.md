@@ -55,29 +55,29 @@ make
 ### `every`/`some`/`reduce`                     Aggregation.
 
 * **With open:**
-# `with "file.txt", "r", encoding="utf-8" as f { f.read() }`              Reading files.
-# `with "file.txt", "w", encoding="utf-8" as f { f.writeLine("hello") }`  Writing files. 
-# `with "file.txt", "a", encoding="utf-8" as f { f.writeLine("append") }` Append into files.
-# `with "file.txt", "w+",encoding="utf-8" as f { f.write("rw") }`         Read and Writing into files.
+### `with "file.txt", "r", encoding="utf-8" as f { f.read() }`              Reading files.
+### `with "file.txt", "w", encoding="utf-8" as f { f.writeLine("hello") }`  Writing files. 
+### `with "file.txt", "a", encoding="utf-8" as f { f.writeLine("append") }` Append into files.
+### `with "file.txt", "w+",encoding="utf-8" as f { f.write("rw") }`         Read and Writing into files.
 
 * **Function:**
-`function x() {}`          Writing function.
-`x()`                      calling it.
-`function x() {return hi}` return element.
+### `function x() {}`          Writing function.
+### `x()`                      calling it.
+### `function x() {return hi}` return element.
 
 * **Simple `say` command Update:** 
-`str x = "hi"`
-`say r`Salam: {x}`   \`
+### `str x = "hi"`
+### `say r`Salam: {x}`   \`
 
 * **Virtual invermont:** 
-`./pypp virtual <name>  `         Create environment
-`./pypp virtual <name> activate`  Show activation help
-`./pypp virtual <name> install `  Install a module
-`./pypp virtual <name> list `     List installed modules
+### `./pypp virtual <name>  `         Create environment
+### `./pypp virtual <name> activate`  Show activation help
+### `./pypp virtual <name> install `  Install a module
+### `./pypp virtual <name> list `     List installed modules
 
 * **Import:**
-`import random`        import packages
-`import random as <n>` use import packages by your name
+### `import random`        import packages
+### `import random as <n>` use import packages by your name
 
 
 ---
