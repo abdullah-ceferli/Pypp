@@ -1,0 +1,3 @@
+import random 
+
+say random.randint(2, 7)

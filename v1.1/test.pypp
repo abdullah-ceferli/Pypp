@@ -1,0 +1,143 @@
+// test_v3.pypp  — array methods + file I/O
+
+// basic array + indexing
+array nums = [10, 20, 30, 40, 50]
+say nums[0]
+say nums[4]
+
+// push / pop
+nums.push(60)
+say nums
+say nums.pop()
+say nums.length()
+
+// shift / unshift
+say nums.shift()
+nums.unshift(10)
+say nums[0]
+
+// indexOf / includes
+say nums.indexOf(30)
+say nums.includes(99)
+say nums.includes(20)
+
+// slice
+say nums.slice(1, 3)
+
+// splice
+array s2 = [1, 2, 3, 4, 5]
+array removed = s2.splice(1, 2, 99, 88)
+say removed
+say s2
+
+// reverse / sort
+array letters = ["banana", "apple", "cherry"]
+letters.sort()
+say letters
+letters.reverse()
+say letters
+
+// join
+say letters.join(" - ")
+
+// concat / flat
+array a = [1, 2]
+array b = [3, 4]
+say a.concat(b)
+array nested2 = [1, [2, 3], [4, [5, 6]]]
+say nested2.flat(2)
+
+// fill
+array filled = [0, 0, 0, 0, 0]
+filled.fill(7, 1, 4)
+say filled
+
+// at / first / last / isEmpty
+array x = [10, 20, 30]
+say x.at(0)
+say x.at(-1)
+say x.first()
+say x.last()
+say x.isEmpty()
+
+// count
+array dupes = [1, 2, 2, 3, 2]
+say dupes.count(2)
+
+// higher-order: forEach
+array evens = [2, 4, 6, 8]
+say "forEach:"
+evens.forEach(fn(v, i) {
+    say r"\{i}: \{v}"
+})
+
+// map
+array doubled = evens.map(fn(v) {
+    v * 2
+})
+say doubled
+
+// filter
+array big = evens.filter(fn(v) {
+    v > 4
+})
+say big
+
+// find / findIndex
+array words = ["hello", "world", "pypp"]
+str found = words.find(fn(w) { w == "world" })
+say found
+say words.findIndex(fn(w) { w == "pypp" })
+
+// every / some
+say evens.every(fn(v) { v > 0 })
+say evens.some(fn(v) { v > 6 })
+
+// reduce
+array nums2 = [1, 2, 3, 4, 5]
+int total = nums2.reduce(fn(acc, v) { acc + v })
+say total
+
+// string methods
+str msg = "Hello, World!"
+say msg.toUpperCase()
+say msg.toLowerCase()
+say msg.includes("World")
+say msg.startsWith("Hello")
+say msg.split(", ")
+say msg.replace("World", "PyPP")
+say msg.slice(7, 12)
+say msg.length()
+
+// file write
+with "test_out.txt", "w", encoding="utf-8" as f {
+    f.write("Hello from PyPP!\n")
+    f.writeLine("Line two")
+    f.writeLine("Line three")
+}
+
+// file read
+say "--- read ---"
+with "test_out.txt", "r", encoding="utf-8" as f {
+    str content = f.read()
+    say content
+}
+
+// file readLines
+say "--- lines ---"
+with "test_out.txt", "r", encoding="utf-8" as f {
+    array lines = f.readLines()
+    say lines.length()
+    for line in lines {
+        say line
+    }
+}
+
+// append
+with "test_out.txt", "a", encoding="utf-8" as f {
+    f.writeLine("Appended line")
+}
+say "--- after append ---"
+with "test_out.txt", "r", encoding="utf-8" as f {
+    say f.read()
+}
