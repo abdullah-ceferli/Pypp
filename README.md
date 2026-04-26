@@ -55,10 +55,10 @@ make
 ### `every`/`some`/`reduce`                     Aggregation.
 
 * **With open:**
-## `with "file.txt", "r", encoding="utf-8" as f { f.read() }`              Reading files.
-## `with "file.txt", "w", encoding="utf-8" as f { f.writeLine("hello") }`  Writing files. 
-## `with "file.txt", "a", encoding="utf-8" as f { f.writeLine("append") }` Append into files.
-## `with "file.txt", "w+",encoding="utf-8" as f { f.write("rw") }`         Read and Writing into files.
+# `with "file.txt", "r", encoding="utf-8" as f { f.read() }`              Reading files.
+# `with "file.txt", "w", encoding="utf-8" as f { f.writeLine("hello") }`  Writing files. 
+# `with "file.txt", "a", encoding="utf-8" as f { f.writeLine("append") }` Append into files.
+# `with "file.txt", "w+",encoding="utf-8" as f { f.write("rw") }`         Read and Writing into files.
 
 * **Function:**
 `function x() {}`          Writing function.
