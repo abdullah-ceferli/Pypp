@@ -40,19 +40,19 @@ make
 ## 🛠 Features
 
 * **Array methoods:** 
-* **`push(v)`, `pop()`                          Add/remove from end.**
-* **`shift()`, `unshift(v)`                     Remove/add at front.**
-* **`indexOf(v)`, `lastIndexOf(v)`              Search positions.**
-* **`includes(v)`,                              Returns bool.**
-* **`slice(start, end)`                         Non-destructive copy.**
-* **`splice(start, count, …inserts)`            In-place edit, returns removed.**
-* **`sort()`, `reverse()`                       In-place sort/flip.**
-* **`join(sep)`, `concat(arr)`                  Combine.**
-* **`flat(depth)`, `fill(v, s, e)`              Flatten / fill range.**
-* **`at(i)`, ` first()`, `last()`, `isEmpty()`  Accessors.**
-* **`length()`, `count(v)`, `clear()`           Info.**
-* **`map`/`filter`/`forEach`/`find`/`findIndex` Higher-order.**
-* **`every`/`some`/`reduce`                     Aggregation.**
+### `push(v)`, `pop()`                          Add/remove from end.
+### `shift()`, `unshift(v)`                     Remove/add at front.
+### `indexOf(v)`, `lastIndexOf(v)`              Search positions.
+### `includes(v)`,                              Returns bool.
+### `slice(start, end)`                         Non-destructive copy.
+### `splice(start, count, …inserts)`            In-place edit, returns removed.
+### `sort()`, `reverse()`                       In-place sort/flip.
+### `join(sep)`, `concat(arr)`                  Combine.
+### `flat(depth)`, `fill(v, s, e)`              Flatten / fill range.
+### `at(i)`, ` first()`, `last()`, `isEmpty()`  Accessors.
+### `length()`, `count(v)`, `clear()`           Info.
+### `map`/`filter`/`forEach`/`find`/`findIndex` Higher-order.
+### `every`/`some`/`reduce`                     Aggregation.
 
 * **With open:**
 `with "file.txt", "r", encoding="utf-8" as f { f.read() }`              Reading files.
