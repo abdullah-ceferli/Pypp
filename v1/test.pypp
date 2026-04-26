@@ -1,0 +1,5 @@
+obj x = [
+    str "User" => "hi"
+]
+
+say x

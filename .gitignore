@@ -1,5 +1,6 @@
 # Python build files
 build/
+installer/
 *.spec
 
 # C++ Executables
