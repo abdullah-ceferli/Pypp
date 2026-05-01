@@ -13,12 +13,14 @@
 #include <filesystem>
 #include <cstdlib>
 #include <chrono>
+#include <chrono>
+#include <ctime>
 namespace fs = std::filesystem;
 
 static const std::string BUILTIN_RANDOM =
     "// random.pypp — PyPP standard random module\n"
     "\n"
-    "int __seed = 123456789\n"
+    "int __seed = time()\n"
     "\n"
     "function seed(n) {\n"
     "    __seed = n\n"
@@ -1150,6 +1152,10 @@ struct Interpreter {
         if(k=="NumberLooper"){
             auto n=std::static_pointer_cast<NumberLooperNode>(node); auto s=evalExpr(n->start,env),e=evalExpr(n->end_,env);
             auto arr=PyPPValue::makeArray(); for(long long x=s->ival;x<e->ival;x++) arr->arr.push_back(std::make_shared<PyPPValue>(x)); return arr;
+        }
+        else if (k == "Time") { 
+            auto now = std::chrono::system_clock::now().time_since_epoch().count();
+            return std::make_shared<PyPPValue>(static_cast<long long>(now % 4294967296)); 
         }
         if(k=="DataType") return std::make_shared<PyPPValue>(evalExpr(std::static_pointer_cast<DataTypeNode>(node)->expr,env)->typeName());
         if(k=="TypeOf")   return std::make_shared<PyPPValue>(evalExpr(std::static_pointer_cast<TypeOfNode>(node)->expr,env)->typeName());
